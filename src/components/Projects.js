@@ -12,31 +12,38 @@ export const Projects = () => {
   const projects = [
     {
       title: "Business Startup",
+      tech: 'React Js, Express JS',
       description: "Design & Development",
       imgUrl: project1,
+     
     },
     {
       title: "Business Startup",
+      tech: 'React Js, Express JS',
       description: "Design & Development",
       imgUrl: project2,
     },
     {
       title: "Business Startup",
+      tech: 'React Js, Express JS',
       description: "Design & Development",
       imgUrl: project3,
     },
     {
       title: "Business Startup",
+      tech: 'React Js, Express JS',
       description: "Design & Development",
       imgUrl: project1,
     },
     {
       title: "Business Startup",
+      tech: 'React Js, Express JS',
       description: "Design & Development",
       imgUrl: project2,
     },
     {
       title: "Business Startup",
+      tech: 'React Js, Express JS',
       description: "Design & Development",
       imgUrl: project3,
     },

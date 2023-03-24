@@ -1,7 +1,7 @@
 import { Col,Card, Button } from "react-bootstrap";
 import "./Projects.css";
 
-export const ProjectCard = ({ title, description, imgUrl }) => {
+export const ProjectCard = ({ title, tech, description, imgUrl }) => {
   return (
     <Col sm={6} md={4}>
       {/* <div className="proj-imgbx">
@@ -14,8 +14,11 @@ export const ProjectCard = ({ title, description, imgUrl }) => {
       
       <Card style={{ width: '20rem' }} className= 'proj-imgbx' >
       <Card.Img variant="top" style={{ width: '20rem' }} src={imgUrl} />
-      <Card.Body>
+      <Card.Body className="proj-txtx">
         <Card.Title>{title}</Card.Title>
+        <Card.Text className="text-start">
+        <span>Tech Used :</span> {tech}
+        </Card.Text>
         <Card.Text>
          {description}
         </Card.Text>

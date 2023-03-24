@@ -129,14 +129,14 @@ height: auto;
     width: 100%
   }
 
-  .proj-txtx h4 {
-    /* margin-top: 250px; */
-    /* top:50px; */
+  /* .proj-txtx h4 {
+    margin-top: 250px;
+    top:50px;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 0.8px;
     line-height: 1.1em;
-  }
+  } */
 
   .proj-txtx span {
     font-style: italic;

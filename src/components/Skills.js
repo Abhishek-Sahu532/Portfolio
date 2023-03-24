@@ -1,4 +1,3 @@
-
 import { Container,Row,Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -40,16 +39,40 @@ export const Skills =()=>{
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 <Carousel responsive={responsive} infinite={true} className="skill-slider">
     <div className="item">
-<img src={meter1} alt='' />
-<h5>Web Development</h5>
+<img src={meter1} alt='Node JS' />
+<h5>Node JS</h5>
     </div>
     <div className="item">
-<img src={meter2} alt='' />
-<h5>Web Development</h5>
+<img src={meter2} alt='Express JS' />
+<h5>Express JS</h5>
     </div>
     <div className="item">
-<img src={meter3} alt='' />
-<h5>Web Development</h5>
+<img src={meter3} alt='Mongo DB' />
+<h5>Mongo DB</h5>
+    </div>
+      <div className="item">
+<img src={meter3} alt='My SQL' />
+<h5>My SQL</h5>
+    </div>
+      <div className="item">
+<img src={meter3} alt='React JS' />
+<h5>React JS</h5>
+    </div>
+      <div className="item">
+<img src={meter3} alt='TailwindCSS' />
+<h5>TailwindCSS</h5>
+    </div>
+      <div className="item">
+<img src={meter3} alt='BootStrap 5' />
+<h5>BootStrap 5</h5>
+    </div>
+      <div className="item">
+<img src={meter3} alt='CSS' />
+<h5>CSS</h5>
+    </div>
+    <div className="item">
+<img src={meter3} alt='HTML' />
+<h5>HTML</h5>
     </div>
 
 </Carousel>
@@ -59,7 +82,7 @@ export const Skills =()=>{
 </Row>
 
 </Container>
-<img className="background-image-left" src={colorSharp} />
+<img className="background-image-left" src={colorSharp} alt='' />
 </section>
     )
 }
