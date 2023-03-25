@@ -10,16 +10,6 @@
     text-align: center;
 }
 
-.project p{
-    color:#b8b8b8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px auto 30px auto;
-    text-align: center;
-    width: 56%;
-}
-
 .project .nav-pills{
     width: 72%;
     margin: 0 auto;
@@ -94,8 +84,8 @@
   }
 
   .proj-imgbx img{
-width: 300px;
-height: auto;
+width: auto;
+height: 230px;
   }
 
   .proj-imgbx::before {
@@ -152,4 +142,56 @@ height: auto;
     width: 35%;
     right: 0;
     z-index: -4;
+  }
+
+
+  .proj-imgbx .project-title{
+    color:  #AA367C;
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+   text-transform: uppercase;
+  }
+  .proj-imgbx .tech_used{
+    color: #AA367C;
+    padding: 0;
+    margin-left: 0;
+    word-wrap: normal;
+    font-weight: 800  ;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .proj-imgbx  .project-desc{
+    color: #AA367C;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    line-height: 1em;
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+  
+.proj-imgbx button{
+  background-color:  #121212 !important;
+  width: 7.5em;
+  height: 35px;
+}
+
+  /* color:#b8b8b8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px auto 30px auto;
+    text-align: center;
+    width: 56%; */
+
+
+    .project .project-section-heading{
+      color:#b8b8b8;
+      font-size: 18px;
+      letter-spacing: 0.8px;
+      line-height: 1.5em;
+      margin: 14px auto 30px auto;
+      text-align: center;
+      width: 56%;
   }

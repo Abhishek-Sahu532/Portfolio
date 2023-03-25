@@ -1,7 +1,12 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
-import project1 from "../assets/img/project-img1.png";
-import project2 from "../assets/img/project-img2.png";
-import project3 from "../assets/img/project-img3.png";
+import project1 from "../assets/img/kids-learning-center.png";
+import project2 from "../assets/img/binaryCalculator.png";
+import project3 from "../assets/img/portfolio.png";
+import project4 from "../assets/img/flashcard-generator.png";
+import project5 from "../assets/img/weater-app.png";
+import project6 from "../assets/img/zomato-clone.png";
+
+
 import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
@@ -11,51 +16,64 @@ import "./Projects.css";
 export const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
-      tech: 'React Js, Express JS',
+      title: "KIDS LEARNING CENTER",
+      tech: 'HTML, CSS, BootStrap',
       description: "Design & Development",
       imgUrl: project1,
+      deployedLink: 'https://abhishek-sahu532.github.io/kids-learning-center/',
+      githubLink: 'https://github.com/Abhishek-Sahu532/kids-learning-center.git'
      
     },
     {
-      title: "Business Startup",
-      tech: 'React Js, Express JS',
+      title: "Binary Calculator",
+      tech: 'HTML, CSS, JS',
       description: "Design & Development",
       imgUrl: project2,
+      deployedLink: 'https://abhishek-sahu532.github.io/Binary-calculator/',
+      githubLink: 'https://github.com/Abhishek-Sahu532/Binary-calculator',
     },
     {
-      title: "Business Startup",
+      title: "Portfolio",
       tech: 'React Js, Express JS',
       description: "Design & Development",
       imgUrl: project3,
+      deployedLink: 'https://abhishek-sahu532.github.io/Binary-calculator/',
+      githubLink: 'https://github.com/Abhishek-Sahu532/Portfolio.git',
     },
     {
-      title: "Business Startup",
-      tech: 'React Js, Express JS',
+      title: "Flashcard Generator",
+      tech: 'React Js, Tailwind CSS',
       description: "Design & Development",
-      imgUrl: project1,
+      imgUrl: project4,
+      deployedLink: 'https://flashcardgenerator.netlify.app/',
+      githubLink: 'https://github.com/Abhishek-Sahu532/flashcard_generator_react_project',
     },
     {
-      title: "Business Startup",
-      tech: 'React Js, Express JS',
+      title: "Weather App",
+      tech: 'HTML, CSS, JS, Weather API',
       description: "Design & Development",
-      imgUrl: project2,
+      imgUrl: project5,
+      deployedLink: 'https://abhishek-sahu532.github.io/weather-app-using-javascript/',
+      githubLink: 'https://github.com/Abhishek-Sahu532/weather-app-using-javascript',
     },
     {
-      title: "Business Startup",
-      tech: 'React Js, Express JS',
+      title: "Zomato Clone",
+      tech: 'HTML, CSS',
       description: "Design & Development",
-      imgUrl: project3,
+      imgUrl: project6,
+      deployedLink: 'https://abhishek-sahu532.github.io/zomato-clone/',
+      githubLink: 'https://github.com/Abhishek-Sahu532/zomato-clone',
     },
   ];
 
+  
   return (
     <section className="project" id="project">
       <Container>
         <Row>
           <Col>
             <h2>Projects</h2>
-            <p>
+            <p className='project-section-heading'>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s
