@@ -1,17 +1,28 @@
 import './App.css';
-import { Banner } from './components/Banner';
-import { Footer } from './components/Footer';
-import {NavBar } from './components/NavBar'
-import { Projects } from './components/Projects';
-import { Skills } from './components/Skills';
+import {NavBar} from './Components/Navbar/NavBar.js'
+import {Banner} from './Components/Banner/Banner.js'
+import {Skills} from './Components/Skills/Skills.js'
+import {Projects} from './Components/Projects/Projects.js'
+import {Footer} from './Components/Footer/Footer.js'
+import { Contact } from './Components/Contact/Contact.js';
+import Certificates from './Components/Certificates/Certificates.js';
+import {Routes,Route} from 'react-router-dom'
+
+
 function App() {
   return (
     <div className="App">
-     <NavBar />
-     <Banner />
-     <Skills />
-     <Projects />
-     <Footer />
+<NavBar />
+<Routes>
+
+<Route path ='/' Component={Banner} />
+<Route path='/skills' Component={Skills} />
+<Route path='/projects' Component={Projects} />
+<Route path='/contact' Component={Contact} />
+<Route path='/certicates' Component={Certificates} />
+</Routes>
+{/* <Footer /> */}
+
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "animate.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../../assets/img/header-img.svg";
 import TrackVisibility from "react-on-screen";
 import './Banner.css'
 
@@ -18,16 +18,7 @@ export const Banner = () => {
   const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
   const period = 2000;
 
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text]);
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const tick = () => {
     let i = loopNum % toRotate.length;
     // console.log(i)
@@ -57,6 +48,17 @@ export const Banner = () => {
       setIndex((prevIndex) => prevIndex + 1);
     }
   };
+  
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text, delta,tick]);
+
 
   return (
     <section className="banner" id="home">

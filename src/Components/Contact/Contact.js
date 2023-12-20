@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import contactImg from "../../assets/img/contact-img.svg";
+
+
 
 export const Contact = () => {
   const initialValue = {
@@ -21,8 +23,8 @@ export const Contact = () => {
     });
   };
 
-  const handleSubmit =()=>{
-    
+  const handleSubmit = () => {
+
   }
 
   return (
@@ -58,25 +60,25 @@ export const Contact = () => {
                     />
                   </Col>
                   <Col className="px-1" sm={6}>
-        <input type='email' placeholder="E-mail" value={initialValue.email} onChange={(e)=>{onFormUpdate('email', e.target.value)}} />
-        
-            </Col> 
-            <Col className="px-1" sm={6}>
-        <input type='tel' placeholder="Phone no" value={initialValue.phone} onChange={(e)=>{onFormUpdate('phone', e.target.value)}} />
-    
-            </Col> 
+                    <input type='email' placeholder="E-mail" value={initialValue.email} onChange={(e) => { onFormUpdate('email', e.target.value) }} />
+
+                  </Col>
+                  <Col className="px-1" sm={6}>
+                    <input type='tel' placeholder="Phone no" value={initialValue.phone} onChange={(e) => { onFormUpdate('phone', e.target.value) }} />
+
+                  </Col>
                 </Row>
               </form>
             </Col>
             <Col>
-            <textarea row={6} value={initialValue.message} onChange={(e)=>{onFormUpdate('message', e.target.value)}} />
-            <button type="submit"><span>{buttonText}</span></button>
+              <textarea row={6} value={initialValue.message} onChange={(e) => { onFormUpdate('message', e.target.value) }} />
+              <button type="submit"><span>{buttonText}</span></button>
             </Col>
             {
-                status.message && 
-                <Col>
+              status.message &&
+              <Col>
                 <p className={status.success === false ? 'danger' : 'success'}>{status.message}</p>
-                </Col>
+              </Col>
             }
           </Row>
         </Container>

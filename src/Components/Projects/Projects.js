@@ -1,17 +1,16 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
-import project1 from "../assets/img/kids-learning-center.png";
-import project2 from "../assets/img/binaryCalculator.png";
-import project3 from "../assets/img/portfolio.png";
-import project4 from "../assets/img/flashcard-generator.png";
-import project5 from "../assets/img/weater-app.png";
-import project6 from "../assets/img/zomato-clone.png";
-
-
+import project1 from "../../assets/img/kids-learning-center.png";
+import project2 from "../../assets/img/binaryCalculator.png";
+import project3 from "../../assets/img/portfolio.png";
+import project4 from "../../assets/img/flashcard-generator.png";
+import project5 from "../../assets/img/weater-app.png";
+import project6 from "../../assets/img/zomato-clone.png";
 import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from "../assets/img/color-sharp2.png";
+import colorSharp2 from "../../assets/img/color-sharp2.png";
 import "animate.css";
-import TrackVisibility from "react-on-screen";
+// import TrackVisibility from "react-on-screen";
 import "./Projects.css";
+
 
 export const Projects = () => {
   const projects = [

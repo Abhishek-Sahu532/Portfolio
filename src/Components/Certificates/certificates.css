@@ -1,0 +1,43 @@
+.certificates{
+padding: 80px 0;
+position: relative;
+background-color: black;
+/* background-image: url(../assets/img/color-sharp2.png); */
+/* background-repeat: no-repeat; */
+/* background-clip: border-box; */
+/* background-clip: content-box; */
+}
+
+
+.certificates h2{
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+}
+.certificates-section-heading{
+    color:#b8b8b8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px auto 30px auto;
+    text-align: center;
+    width: 56%;
+}
+.certificatesCard{
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    width: 300px;
+    height: 300px;
+}
+
+/* .colorsharp img{
+    width: 5%;
+    height: 10%;
+    top: 28%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -4;
+} */
