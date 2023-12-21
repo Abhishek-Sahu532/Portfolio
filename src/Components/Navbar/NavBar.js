@@ -31,7 +31,7 @@ export const NavBar = () => {
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img src={logo} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav " />
@@ -40,7 +40,7 @@ export const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
-              href="#home"
+              href="/"
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
@@ -51,7 +51,7 @@ export const NavBar = () => {
               Home
             </Nav.Link>
             <Nav.Link
-              href="#skills"
+              href="/skills"
               className={
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
               }
@@ -62,7 +62,7 @@ export const NavBar = () => {
               Skills
             </Nav.Link>
             <Nav.Link
-              href="#projects"
+              href="/projects"
               className={
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }
@@ -72,6 +72,29 @@ export const NavBar = () => {
             >
               Projects
             </Nav.Link>
+            <Nav.Link
+              href="/contact"
+              className={
+                activeLink === "contact" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => {
+                onUpdateActiveLink("contact");
+              }}
+            >
+              Contact
+            </Nav.Link>
+            <Nav.Link
+              href="/certificates"
+              className={
+                activeLink === "certificates" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => {
+                onUpdateActiveLink("certificates");
+              }}
+            >
+              Certificates
+            </Nav.Link>
+            
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
