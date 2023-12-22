@@ -19,7 +19,7 @@ function App() {
 <Route path='/skills' Component={Skills} />
 <Route path='/projects' Component={Projects} />
 <Route path='/contact' Component={Contact} />
-<Route path='/certicates' Component={Certificates} />
+<Route path='/certificates' Component={Certificates} />
 </Routes>
 {/* <Footer /> */}
 

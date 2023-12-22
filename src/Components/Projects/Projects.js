@@ -73,9 +73,7 @@ export const Projects = () => {
           <Col>
             <h2>Projects</h2>
             <p className='project-section-heading'>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
+            My projects makes use of vast variety of latest technology tools. My best experience is to create Full Stack projects and deploy them to web applications using cloud infrastructure and web servers.
             </p>
 
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
