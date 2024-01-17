@@ -5,6 +5,7 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../../assets/img/header-img.svg";
 import TrackVisibility from "react-on-screen";
 import './Banner.css'
+import Resume from '../../assets/Abhi Latest CV.pdf'
 
 
 
@@ -17,6 +18,17 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
   const period = 2000;
+
+   
+  const handleDownload = () => {
+    // Trigger download by creating an 'a' element and simulating a click
+    const link = document.createElement("a");
+    link.href = Resume;
+    link.download = "downloaded_file.pdf"; // Specify the file name for download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const tick = () => {
@@ -80,14 +92,10 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                  Passionate about learning new tech, I bring 1+ years of experience in creating visually compelling content for diverse clients. My expertise in JavaScript and learning python, a dynamic approach to design make me a versatile professional. Beyond work, you'll find me experimenting with new art techniques and exploring the intersection of design and technology. Let's connect and explore how we can elevate your visual presence.
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
+                  <button onClick={handleDownload}>
+                    Hire Me !<ArrowRightCircle size={25} />
                   </button>
                 </div>
               )}

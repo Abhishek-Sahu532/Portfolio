@@ -1,0 +1,76 @@
+.degreeCards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 3vmax;
+  border: #4a2fbd 1px solid;
+  padding: 2vmax;
+  border-radius: 2vmax;
+  justify-items: center;
+}
+
+.instituteLogoSection {
+  width: 30%;
+  /* margin-left:3vmax ; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.instituteLogoSection img {
+  width: auto;
+  height: 7vmax;
+  border-radius: 1vmax;
+}
+
+.instituteSection {
+  width: 70%;
+  background: linear-gradient(90.21deg, #aa367c -7%, #4a2fbd 150%);
+  padding: 2vmax;
+  border-radius: 2vmax;
+  margin-left: 0.5vmax;
+}
+
+.instituteSection h4 {
+  position: absolute;
+}
+
+.instituteSection .passedYear {
+  /* position: absolute; */
+  text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+  .degreeCards {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .instituteLogoSection img {
+    width: auto;
+    height: 14vmax;
+    border-radius: 1vmax;
+  }
+
+  .instituteSection {
+    width: 100%;
+  }
+
+  .instituteSection h4 {
+    font-size: 3.4vmax;
+    text-wrap:pretty;
+    display: block;
+    position: absolute;
+  }
+  .instituteSection .passedYear {
+    /* position: absolute; */
+    text-align: right;
+  }
+  .instituteSection h5 {
+    font-size: 4vmax;
+  }
+  .Experiences-section-heading{
+    width: 90%;
+  }
+}

@@ -9,7 +9,7 @@ const CertificateCard = ({ certificate }) => {
         style={{ width: "20rem", height: "17rem" }}
         className="certificatesCard"
       >
-        <a href={certificate.Verifiedlink} target="_blank">
+        <a href={certificate.Verifiedlink} target="_blank" rel="noreferrer">
           <Card.Img
             variant="top"
             className="certificateLogo"

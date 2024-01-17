@@ -39,6 +39,11 @@
   width: 96%;
 }
 
+.banner button{
+  color:  white;
+  font-size: larger;
+  font-weight: 600;
+}
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
