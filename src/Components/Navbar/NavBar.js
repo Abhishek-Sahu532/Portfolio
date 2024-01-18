@@ -8,6 +8,7 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
+
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
@@ -29,13 +30,12 @@ export const NavBar = () => {
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
-    // console.log(value);
     if (collapseRef.current) {
       collapseRef.current.classList.remove("show");
     }
   };
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+    <Navbar  expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="/">
           <img src={logo} alt="logo" />
@@ -52,12 +52,17 @@ export const NavBar = () => {
                 onUpdateActiveLink("home");
               }}
             >
-              <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+              <Link
+                to="/"
+                className="mainRoutes"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
                 {" "}
                 Home{" "}
               </Link>
             </Nav.Link>
             <Nav.Link
+              href="/skills"
               className={
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
               }
@@ -74,6 +79,7 @@ export const NavBar = () => {
               </Link>
             </Nav.Link>
             <Nav.Link
+              href="/projects"
               className={
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }
@@ -91,6 +97,7 @@ export const NavBar = () => {
               </Link>
             </Nav.Link>
             <Nav.Link
+              href="/contact"
               className={
                 activeLink === "contact" ? "active navbar-link" : "navbar-link"
               }
@@ -107,6 +114,7 @@ export const NavBar = () => {
               </Link>
             </Nav.Link>
             <Nav.Link
+              href="/certificates"
               className={
                 activeLink === "certificates"
                   ? "active navbar-link"
@@ -125,6 +133,7 @@ export const NavBar = () => {
               </Link>
             </Nav.Link>
             <Nav.Link
+              href="/certificates"
               className={
                 activeLink === "certificates"
                   ? "active navbar-link"

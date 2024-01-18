@@ -49,7 +49,11 @@
 @media screen and (max-width: 480px) {
   .skill p {
     text-align: justify;
+    /* width: 80%;
+    */
   }
   
- 
+  /* .skill-bx {
+    padding:0;
+  } */
 }
