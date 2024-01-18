@@ -6,11 +6,12 @@ import navIcon3 from "../../assets/img/nav-icon3.svg";
 import github from "../../assets/img/github.png";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-
+  const collapseRef = useRef(null);
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
@@ -22,28 +23,26 @@ export const NavBar = () => {
     window.addEventListener("scroll", onScroll);
 
     return () => {
-      window.removeEventListener("scroll", onscroll);
+      window.removeEventListener("scroll", onScroll);
     }; //removing the same event listener
   }, []);
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
     // console.log(value);
+    if (collapseRef.current) {
+      collapseRef.current.classList.remove("show");
+    }
   };
   return (
-
-  
-
-
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="/">
           <img src={logo} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav " />
-        {/* <span className="navbar-toggler-icon"></span>
-        </Navbar.Toggle> */}
-        <Navbar.Collapse id="basic-navbar-nav">
+
+        <Navbar.Collapse id="navbar-collapse" ref={collapseRef}>
           <Nav className="me-auto">
             <Nav.Link
               className={
@@ -53,17 +52,12 @@ export const NavBar = () => {
                 onUpdateActiveLink("home");
               }}
             >
-              <Link
-                to="/"
-                className="mainRoutes"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
+              <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
                 {" "}
                 Home{" "}
               </Link>
             </Nav.Link>
             <Nav.Link
-              href="/skills"
               className={
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
               }
@@ -80,7 +74,6 @@ export const NavBar = () => {
               </Link>
             </Nav.Link>
             <Nav.Link
-              href="/projects"
               className={
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }
@@ -98,7 +91,6 @@ export const NavBar = () => {
               </Link>
             </Nav.Link>
             <Nav.Link
-              href="/contact"
               className={
                 activeLink === "contact" ? "active navbar-link" : "navbar-link"
               }
@@ -115,7 +107,6 @@ export const NavBar = () => {
               </Link>
             </Nav.Link>
             <Nav.Link
-              href="/certificates"
               className={
                 activeLink === "certificates"
                   ? "active navbar-link"
@@ -134,7 +125,6 @@ export const NavBar = () => {
               </Link>
             </Nav.Link>
             <Nav.Link
-              href="/certificates"
               className={
                 activeLink === "certificates"
                   ? "active navbar-link"
@@ -165,7 +155,7 @@ export const NavBar = () => {
                 <img src={navIcon1} alt="" />
               </a>
               <a
-                href="https://www.linkedin.com/in/abhishek-sahu532/"
+                href="https://github.com/Abhishek-Sahu532"
                 target="_blank"
                 rel="noreferrer"
               >

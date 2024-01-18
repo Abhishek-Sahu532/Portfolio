@@ -11,7 +11,6 @@ import assure_you_thumbnail from "../../assets/img/assure_you_thumbnail.png";
 import nikeLandingPage from "../../assets/img/nikeLandingPage.png";
 import "animate.css";
 import "./Projects.css";
-import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
   const projectsForTabOne = [
@@ -118,7 +117,7 @@ export const Projects = () => {
 
               <Tab.Content>
                 <Tab.Pane eventKey="first">
-                  <Row>
+                  <Row className="projectCardSection">
                     {projectsForTabOne.map((project, index) => {
                       return <ProjectCard key={index} {...project} />;
                     })}
@@ -126,7 +125,7 @@ export const Projects = () => {
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="second">
-                  <Row>
+                  <Row className="projectCardSection">
                     {projectsForTabTwo.map((project, index) => {
                       return <ProjectCard key={index} {...project} />;
                     })}

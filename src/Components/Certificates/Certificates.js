@@ -9,7 +9,6 @@ import Coursera from "../../assets/img/COURSERA.png";
 import samLogo from "../../assets/img/samLogo.jpeg";
 import { FaHashtag } from "react-icons/fa";
 
-
 const Certificates = () => {
   const CertificatesList = [
     {
@@ -55,7 +54,6 @@ const Certificates = () => {
     <section className="certificates">
       <Container>
         <Row>
-
           <Col>
             <h2>Certifications</h2>
             <p className="certificates-section-heading">
@@ -66,31 +64,31 @@ const Certificates = () => {
             </p>
 
             <Col>
-            <h3>Degrees Received </h3>
-            <hr />
-  
-            <div className="degreeCards">
-              <div className="instituteLogoSection">
-                <img src={samLogo} alt="samLogo" />
-              </div>
+              <h3>Degrees Received </h3>
               <hr />
-              <div className="instituteSection">
-                <div>
-                  <h4>SAM College Of Engineering & Technology </h4>
-                  <p className="passedYear">2016-2018</p>{" "}
-                  <h5>Master of Computer Application</h5>
+
+              <div className="degreeCards">
+                <div className="instituteLogoSection">
+                  <img src={samLogo} alt="samLogo" />
                 </div>
                 <hr />
-                <div className="courseDescription">
-                  <p>
-                    <FaHashtag />I have studied basic software engineering
-                    subjects like DS, Algorithms, DBMS, OS, IoT, ML etc.
-                  </p>
-                </div>{" "}
+                <div className="instituteSection">
+                  <div>
+                    <h4>SAM College Of Engineering & Technology </h4>
+                    <p className="passedYear">2016-2018</p>{" "}
+                    <h5>Master of Computer Application</h5>
+                  </div>
+                  <hr />
+                  <div className="courseDescription">
+                    <p>
+                      <FaHashtag />I have studied basic software engineering
+                      subjects like DS, Algorithms, DBMS, OS, IoT, ML etc.
+                    </p>
+                  </div>{" "}
+                </div>
               </div>
-            </div>
-          </Col>
-          <hr/>
+            </Col>
+            <hr />
             <Row>
               {CertificatesList.map((item, index) => {
                 return <CertificateCard key={index} certificate={item} />;

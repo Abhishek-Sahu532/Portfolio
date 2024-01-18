@@ -59,7 +59,7 @@
 
   .instituteSection h4 {
     font-size: 3.4vmax;
-    text-wrap:pretty;
+    text-wrap: nowrap;
     display: block;
     position: absolute;
   }
@@ -70,7 +70,26 @@
   .instituteSection h5 {
     font-size: 4vmax;
   }
-  .Experiences-section-heading{
+  .Experiences-section-heading {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .instituteSection h4 {
+    /* position: absolute; */
+    font-size: 2vmax;
+    position: relative;
+    text-wrap: nowrap;
+    overflow: auto;
+    /* background-color: red; */
+  }
+
+  .instituteSection .passedYear {
+    display: block;
+    text-align: justify;
+  }
+  .instituteSection h5 {
+    font-size: 2vmax;
   }
 }

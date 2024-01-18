@@ -11,14 +11,14 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
-  width: 9%;
+  width: 9%;  
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 18px;
+  font-size: 18px;  
   opacity: 0.75;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -145,4 +145,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
+}
+
+@media screen and (max-width: 480px) {
+  nav.navbar a.navbar-brand {
+    width: 35%;
+  }
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+   padding: 2.5vmax;
+  }
+  nav.navbar {
+   background-color: black;
+  }
 }

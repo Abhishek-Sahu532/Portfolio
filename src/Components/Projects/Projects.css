@@ -1,5 +1,4 @@
 .project {
-
   position: relative;
   background-color: black;
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
@@ -202,5 +201,35 @@
   }
   .proj-imgbx {
     align-items: center;
+  }
+  .project .nav-pills {
+    width: 100%;
+    margin: 0 0;
+  }
+
+  .project .nav .nav-pills .nav-item {
+    width: 33.33%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project .nav-pills {
+    width: 100%;
+    margin: 0 0;
+  }
+  .project .nav .nav-pills .nav-item {
+    width: 33.33%;
+  }
+  .project .project-section-heading {
+    font-size: 2vmax;
+    text-align: justify;
+  }
+  .proj-imgbx {
+    display: flex;
+    justify-content: center;
+  }
+  .projectCardSection {
+    display: flex;
+    justify-content: center;
   }
 }
