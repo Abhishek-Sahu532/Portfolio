@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4dfe6b88.css",
-    "main.js": "/static/js/main.90ed04f2.js",
+    "main.css": "/static/css/main.6631c59f.css",
+    "main.js": "/static/js/main.9af49491.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/weater-app.png": "/static/media/weater-app.73d49ca3d5773e181c92.png",
     "static/media/zomato-clone.png": "/static/media/zomato-clone.2998b03a33355d200b0e.png",
@@ -31,12 +31,12 @@
     "static/media/nav-icon3.svg": "/static/media/nav-icon3.08b285abb8e118b52637efa5d65c5367.svg",
     "static/media/nav-icon1.svg": "/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "index.html": "/index.html",
-    "main.4dfe6b88.css.map": "/static/css/main.4dfe6b88.css.map",
-    "main.90ed04f2.js.map": "/static/js/main.90ed04f2.js.map",
+    "main.6631c59f.css.map": "/static/css/main.6631c59f.css.map",
+    "main.9af49491.js.map": "/static/js/main.9af49491.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4dfe6b88.css",
-    "static/js/main.90ed04f2.js"
+    "static/css/main.6631c59f.css",
+    "static/js/main.9af49491.js"
   ]
 }

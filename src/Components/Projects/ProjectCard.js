@@ -13,7 +13,7 @@ export const ProjectCard = ({
 }) => {
   return (
     <Col sm={6} md={4}>
-      <Card style={{ width: "23rem" }} className="proj-imgbx" >
+      <Card className="proj-imgbx" >
         <Card.Img variant="top" src={imgUrl} />
         <Card.Body className="proj-txtx">
           <Card.Title className="project-title">{title}</Card.Title>
