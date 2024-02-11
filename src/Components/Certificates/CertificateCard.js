@@ -4,12 +4,12 @@ import "./certificates.css";
 
 const CertificateCard = ({ certificate }) => {
   return (
-    <Col sm={6} md={4}>
+    <Col sm={6} md={4} className="mx-auto">
       <Card
-        style={{ width: "20rem", height: "17rem" }}
+     
         className="certificatesCard"
       >
-        <a href={certificate.Verifiedlink} target="_blank">
+        <a href={certificate.Verifiedlink} target="_blank" rel="noreferrer">
           <Card.Img
             variant="top"
             className="certificateLogo"

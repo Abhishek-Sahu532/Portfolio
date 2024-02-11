@@ -1,64 +1,49 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const cors = require('cors');
-const nodemailer = require('nodemailer');
-
-
-
-
+const cors = require("cors");
+const dotenv = require("dotenv");
+const sendEmail = require("./sendEmail");
 const app = express();
+const path = require('path')
 
 
 app.use(cors());
 app.use(express.json());
-app.use('/', router);
+app.use("/", router);
+dotenv.config({ path: "config/.env" });
 
-app.listen(5000, ()=>{
-    console.log('Server is running')
+router.post("/contact", async (req, res) => {
+  const name = req.body.firstName + req.body.lastName;
+  const email = req.body.email;
+  const message = req.body.message;
+  const phone = req.body.phone;
+
+  const messageForEmailBody = `Name : ${name} 
+  Email : ${email} 
+  Phone : ${phone} 
+  Message : ${message} 
+  `;
+
+  try {
+    await sendEmail({
+      email: email,
+      subject: `Form Submission - Portfolio`,
+      messageForEmailBody,
+    });
+
+   return res.json({code: 200, status: 'Message Sent'})
+  } catch (error) {
+    console.log(error);
+    return res.status(500).send(error);
+  }
 });
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
 
+app.use(express.static(path.join(__dirname, "/build")));
 
-const contactEmail = nodemailer.createTransport({
-    service : 'gmail',
-    auth:{
-        user: 'asahu532@gmail.com',
-        pass :''
-    },
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "build/index.html"));
 });
 
-contactEmail.verify((error)=>{
-    if(error){
-        console.log(error)
-    }else{
-        console.log('Ready to send')
-    }
+app.listen(process.env.PORT, () => {
+  console.log("Server is running" , process.env.PORT);
 });
-
-
-router.post('/contact', (req, res)=>{
-   const name = req.body.firstName + req.body.lastName;
-   const email = req.body.email;
-   const message = req.body.message;
-   const phone = req.body.phone;
-   const mail ={
-    from : name,
-    to: 'asahu532@gmail.com',
-    subject: 'Form Submission - Portfolio',
-    htm: `<p>Name : ${name} </p>
-    <p>Email : ${email} </p>
-    <p>Phone : ${phone} </p>
-    <p>Message : ${message} </p>
-    `
-   } ;
-
-contactEmail.sendMail(mail, (error)=>{
-    if(error){
-        res.json(error);
-    }else{
-        res.json({code: 200, status: 'Message Sent'})
-    }
-})
-
-})

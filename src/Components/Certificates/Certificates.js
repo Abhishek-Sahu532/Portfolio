@@ -1,12 +1,13 @@
 import React from "react";
-import { Card, Col, Row, Button, Container } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 import "./certificates.css";
 import CertificateCard from "./CertificateCard";
-import Devsnest from '../../assets/img/devsnest.svg'
-import Almabetter from '../../assets/img/almabetter.png'
-import HackerRank from '../../assets/img/hackerRank.png'
-import Coursera from '../../assets/img/COURSERA.png'
-
+import Devsnest from "../../assets/img/devsnest.svg";
+import Almabetter from "../../assets/img/almabetter.png";
+import HackerRank from "../../assets/img/hackerRank.png";
+import Coursera from "../../assets/img/COURSERA.png";
+import samLogo from "../../assets/img/samLogo.jpeg";
+import { FaHashtag } from "react-icons/fa";
 
 const Certificates = () => {
   const CertificatesList = [
@@ -23,7 +24,8 @@ const Certificates = () => {
       logo: Devsnest,
     },
     {
-      Verifiedlink: "https://certificates.almabetter.com/en/verify/85843576690962",
+      Verifiedlink:
+        "https://certificates.almabetter.com/en/verify/85843576690962",
       title: "Full-Stack Web Development",
       issuedBy: "Alma Better",
       logo: Almabetter,
@@ -41,7 +43,8 @@ const Certificates = () => {
       logo: HackerRank,
     },
     {
-      Verifiedlink: "https://coursera.org/share/eeda7e8dae85f9c4c279c6e63cefd8aa",
+      Verifiedlink:
+        "https://coursera.org/share/eeda7e8dae85f9c4c279c6e63cefd8aa",
       title: "Excel Skills for Data Analytics and Visualization",
       issuedBy: "Coursera- MACQUARIE UNIVERSITY",
       logo: Coursera,
@@ -59,15 +62,38 @@ const Certificates = () => {
               them to web applications using cloud infrastructure and web
               servers.
             </p>
-            <div></div>
+
+            <Col>
+              <h3>Degrees Received </h3>
+              <hr />
+
+              <div className="degreeCards">
+                <div className="instituteLogoSection">
+                  <img src={samLogo} alt="samLogo" />
+                </div>
+                <hr />
+                <div className="instituteSection">
+                  <div>
+                    <h4>SAM College Of Engineering & Technology </h4>
+                    <p className="passedYear">2016-2018</p>{" "}
+                    <h5>Master of Computer Application</h5>
+                  </div>
+                  <hr />
+                  <div className="courseDescription">
+                    <p>
+                      <FaHashtag />I have studied basic software engineering
+                      subjects like DS, Algorithms, DBMS, OS, IoT, ML etc.
+                    </p>
+                  </div>{" "}
+                </div>
+              </div>
+            </Col>
+            <hr />
             <Row>
-
-              {CertificatesList.map((item, index)=>{
-              return  <CertificateCard key={index} certificate={item} />
+              {CertificatesList.map((item, index) => {
+                return <CertificateCard key={index} certificate={item} />;
               })}
-              
-
-                       </Row>
+            </Row>
           </Col>
         </Row>
       </Container>

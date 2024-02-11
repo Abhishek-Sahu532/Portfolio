@@ -1,8 +1,9 @@
 .contact {
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
     /* padding: 80px 0 200px 0; */
-    height: 100vh;
-    padding-top: 10vmax;
+    /* height: 100vh; */
+    padding-top: 8vmax;
+    padding-bottom: 2vmax;
   }
   .contact img {
     width: 92%;

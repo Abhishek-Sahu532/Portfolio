@@ -1,6 +1,6 @@
 
 
-.certificates{
+.certificates, .experiences{
 padding: 10vmax 0;
 position: relative;
 background-color: black;
@@ -14,13 +14,13 @@ padding-top: 10vmax;
 }
 
 
-.certificates h2{
+.certificates h2, .experiences h2{
     font-size: 45px;
     font-weight: 700;
     text-align: center;
     /* margin-top: 25px; */
 }
-.certificates-section-heading{
+.certificates-section-heading, .Experiences-section-heading{
     color:#b8b8b8;
     font-size: 18px;
     letter-spacing: 0.8px;
@@ -36,10 +36,10 @@ padding-top: 10vmax;
 .certificatesCard{
     position: relative;
     border-radius: 30px;
-    overflow: hidden;
+    overflow:hidden;
     margin-bottom: 24px;
     width: 300px;
-    height: 300px;
+    height: 350px;
     margin-top: 15px;
 }
 
@@ -64,3 +64,17 @@ padding-top: 10vmax;
     font-style: italic;
 }
 
+@media screen and (max-width: 480px) {
+  .certificates-section-heading, .Experiences-section-heading{
+    text-align: justify;
+    padding: 0;
+    width: 90%;
+  }
+h3{
+  text-align: center;
+  margin-bottom: 8px;
+}
+.courseDescription p{
+  line-height: 3.5vmax;
+}
+}

@@ -2,14 +2,17 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import logo from "../../assets/img/logo.svg";
 import navIcon1 from "../../assets/img/nav-icon1.svg";
-import navIcon2 from "../../assets/img/nav-icon2.svg";
 import navIcon3 from "../../assets/img/nav-icon3.svg";
+import github from "../../assets/img/github.png";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
+import { useRef } from "react";
+
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-
+  const collapseRef = useRef(null);
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
@@ -21,34 +24,42 @@ export const NavBar = () => {
     window.addEventListener("scroll", onScroll);
 
     return () => {
-      window.removeEventListener("scroll", onscroll);
+      window.removeEventListener("scroll", onScroll);
     }; //removing the same event listener
   }, []);
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
+    if (collapseRef.current) {
+      collapseRef.current.classList.remove("show");
+    }
   };
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+    <Navbar  expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="/">
           <img src={logo} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav " />
-        {/* <span className="navbar-toggler-icon"></span>
-        </Navbar.Toggle> */}
-        <Navbar.Collapse id="basic-navbar-nav">
+
+        <Navbar.Collapse id="navbar-collapse" ref={collapseRef}>
           <Nav className="me-auto">
             <Nav.Link
-              href="/"
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => {
                 onUpdateActiveLink("home");
               }}
-            >   
-              Home
+            >
+              <Link
+                to="/"
+                className="mainRoutes"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                {" "}
+                Home{" "}
+              </Link>
             </Nav.Link>
             <Nav.Link
               href="/skills"
@@ -59,7 +70,13 @@ export const NavBar = () => {
                 onUpdateActiveLink("skills");
               }}
             >
-              Skills
+              <Link
+                to="/skills"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                {" "}
+                Skills{" "}
+              </Link>
             </Nav.Link>
             <Nav.Link
               href="/projects"
@@ -70,7 +87,14 @@ export const NavBar = () => {
                 onUpdateActiveLink("projects");
               }}
             >
-              Projects
+              {" "}
+              <Link
+                to="/projects"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                {" "}
+                Projects{" "}
+              </Link>
             </Nav.Link>
             <Nav.Link
               href="/contact"
@@ -81,41 +105,79 @@ export const NavBar = () => {
                 onUpdateActiveLink("contact");
               }}
             >
-              Contact
+              <Link
+                to="/contact"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                {" "}
+                Contact{" "}
+              </Link>
             </Nav.Link>
             <Nav.Link
               href="/certificates"
               className={
-                activeLink === "certificates" ? "active navbar-link" : "navbar-link"
+                activeLink === "certificates"
+                  ? "active navbar-link"
+                  : "navbar-link"
               }
               onClick={() => {
                 onUpdateActiveLink("certificates");
               }}
             >
-              Certificates
+              <Link
+                to="/certificates"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                {" "}
+                Certificates{" "}
+              </Link>
             </Nav.Link>
-            
+            <Nav.Link
+              href="/certificates"
+              className={
+                activeLink === "certificates"
+                  ? "active navbar-link"
+                  : "navbar-link"
+              }
+              onClick={() => {
+                onUpdateActiveLink("certificates");
+              }}
+            >
+              <Link
+                to="/experience"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                {" "}
+                Experience{" "}
+              </Link>
+            </Nav.Link>
           </Nav>
+
+          {/* ICONS PART */}
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/abhishek-sahu532/" target="_blank" rel="noreferrer" >
+              <a
+                href="https://www.linkedin.com/in/abhishek-sahu532/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={navIcon1} alt="" />
               </a>
-              <a href="https://www.linkedin.com/in/abhishek-sahu532/" target="_blank" rel="noreferrer">
-                <img src={navIcon2} alt="" />
+              <a
+                href="https://github.com/Abhishek-Sahu532"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={github} alt="" />
               </a>
-              <a href="https://www.linkedin.com/in/abhishek-sahu532/" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.instagram.com/sahu_abhishek____/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={navIcon3} alt="" />
               </a>
             </div>
-            <button
-              className="vvd"
-              onClick={() => {
-                console.log("connect");
-              }}
-            >
-              Let's Connect{" "}
-            </button>
           </span>
         </Navbar.Collapse>
       </Container>
