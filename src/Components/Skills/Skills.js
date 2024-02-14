@@ -35,7 +35,7 @@ export const Skills = () => {
           {({ isVisible }) => (
             <div
               className={
-                isVisible ? "animate__animated animate__fadeInLeft" : ""
+                isVisible ? "animate__animated animate__zoomIn animate__slow --animate-duration: 0.5s; " : ""
               }
             >
               <Row>

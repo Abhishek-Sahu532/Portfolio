@@ -39,6 +39,13 @@ const Experience = () => {
       <Container>
         <Row>
           <Col>
+          <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible ? "animate__animated animate__zoomIn animate__slow --animate-duration: 0.5s animate__repeat-0" : ""
+                    }
+                  >
             <h2>Experiences</h2>
             <p className="Experiences-section-heading">
               I am working in an evolving startup as Full Stack Developer,
@@ -47,15 +54,9 @@ const Experience = () => {
               events and that is why I am also involved with many opensource
               communities and also as a representative.
             </p>
-
+</div>)}</TrackVisibility>
             {experiences.map((experience, index) => (
-              <TrackVisibility>
-                {({ isVisible }) => (
-                  <div
-                    className={
-                      isVisible ? "animate__animated animate__fadeInLeft" : ""
-                    }
-                  >
+             
                     <Col key={index}>
                       <div className="degreeCards">
                         <div className="instituteLogoSection">
@@ -81,9 +82,7 @@ const Experience = () => {
                       </div>
                       <hr />
                     </Col>
-                  </div>
-                )}
-              </TrackVisibility>
+                
             ))}
           </Col>
         </Row>

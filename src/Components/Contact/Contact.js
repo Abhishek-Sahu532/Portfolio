@@ -51,15 +51,15 @@ export const Contact = () => {
   };
 
   return (
-   
-          <section className="contact" id="connect">
-            <Container>
 
-            <TrackVisibility>
-            {({ isVisible }) => (
-              <div
-                className={isVisible ? "animate__animated animate__fadeInLeft" : ""}
-              >
+    <section className="contact" id="connect">
+      <Container>
+
+        <TrackVisibility>
+          {({ isVisible }) => (
+            <div
+              className={isVisible ? "animate__animated animate__fadeInLeft animate__slow --animate-duration: 0.5s; " : ""}
+            >
               <Row className="align-items-center">
                 <Col md={6}>
                   <img src={contactImg} alt="Contact Us" />
@@ -139,11 +139,11 @@ export const Contact = () => {
                   </form>
                 </Col>
               </Row>
-              </div>
-              )}
-            </TrackVisibility>
-            </Container>
-          </section>
-    
+            </div>
+          )}
+        </TrackVisibility>
+      </Container>
+    </section>
+
   );
 };

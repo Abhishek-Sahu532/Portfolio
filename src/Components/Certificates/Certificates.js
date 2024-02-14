@@ -8,6 +8,11 @@ import HackerRank from "../../assets/img/hackerRank.png";
 import Coursera from "../../assets/img/COURSERA.png";
 import samLogo from "../../assets/img/samLogo.jpeg";
 import { FaHashtag } from "react-icons/fa";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
+
+
+
 
 const Certificates = () => {
   const CertificatesList = [
@@ -55,6 +60,13 @@ const Certificates = () => {
       <Container>
         <Row>
           <Col>
+          <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible ? "animate__animated animate__zoomIn animate__slow --animate-duration: 0.5s animate__repeat-0" : ""
+                    }
+                  >
             <h2>Certifications</h2>
             <p className="certificates-section-heading">
               My projects makes use of vast variety of latest technology tools.
@@ -62,7 +74,7 @@ const Certificates = () => {
               them to web applications using cloud infrastructure and web
               servers.
             </p>
-
+            </div>)}</TrackVisibility>
             <Col>
               <h3>Degrees Received </h3>
               <hr />

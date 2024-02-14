@@ -1,6 +1,5 @@
 import { Col, Card, Button } from "react-bootstrap";
 import "./Projects.css";
-import "animate.css";
 
 
 export const ProjectCard = ({
@@ -13,6 +12,7 @@ export const ProjectCard = ({
 }) => {
   return (
     <Col sm={6} md={4}>
+     
       <Card className="proj-imgbx" >
         <Card.Img variant="top" src={imgUrl} />
         <Card.Body className="proj-txtx">
@@ -33,6 +33,7 @@ export const ProjectCard = ({
           </a>
         </Card.Body>
       </Card>
+ 
     </Col>
   );
 };

@@ -81,7 +81,7 @@ export const Banner = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__fadeInLeft" : ""
+                    isVisible ? "animate__animated animate__fadeInLeft animate__slow --animate-duration: 0.5s; " : ""
                   }
                 >
                   <span className="tagline">Welcome to my Portfolio</span>

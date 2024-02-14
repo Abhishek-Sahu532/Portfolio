@@ -11,6 +11,9 @@ import assure_you_thumbnail from "../../assets/img/assure_you_thumbnail.png";
 import nikeLandingPage from "../../assets/img/nikeLandingPage.png";
 import "animate.css";
 import "./Projects.css";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
+
 
 export const Projects = () => {
   const projectsForTabOne = [
@@ -91,6 +94,14 @@ export const Projects = () => {
       <Container>
         <Row>
           <Col>
+
+          <TrackVisibility>
+          {({ isVisible }) => (
+            <div
+              className={
+                isVisible ? "animate__animated animate__zoomIn animate__slow --animate-duration: 0.5s; " : ""
+              }
+            >
             <h2>Projects</h2>
             <p className="project-section-heading">
               My projects makes use of vast variety of latest technology tools.
@@ -98,7 +109,7 @@ export const Projects = () => {
               them to web applications using cloud infrastructure and web
               servers.
             </p>
-
+</div> )}</TrackVisibility>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav
                 variant="pills"
@@ -114,6 +125,7 @@ export const Projects = () => {
                   <Nav.Link eventKey="third">Tab Three</Nav.Link>
                 </Nav.Item>
               </Nav>
+         
 
               <Tab.Content>
                 <Tab.Pane eventKey="first">
@@ -133,6 +145,7 @@ export const Projects = () => {
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">Lorem ipsum</Tab.Pane>
               </Tab.Content>
+              
             </Tab.Container>
           </Col>
         </Row>

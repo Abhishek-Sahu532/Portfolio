@@ -8,7 +8,6 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
-
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
@@ -35,7 +34,8 @@ export const NavBar = () => {
     }
   };
   return (
-    <Navbar  expand="lg" className={scrolled ? "scrolled" : ""}>
+
+    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="/">
           <img src={logo} alt="logo" />
@@ -182,5 +182,7 @@ export const NavBar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
+
   );
 };
