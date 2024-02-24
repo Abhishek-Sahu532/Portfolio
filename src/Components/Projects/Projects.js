@@ -22,8 +22,8 @@ export const Projects = () => {
       tech: "React.js, Redux, MUI, Express, MongoDB ",
       description: "Shop Secure, Shop Assure You",
       imgUrl: assure_you_thumbnail,
-      deployedLink: "https://assure-you.onrender.com/",
-      githubLink: "https://github.com/Abhishek-Sahu532/e-commerce-app",
+      deployedLink: "https://assure-you-new.onrender.com/",
+      githubLink: "https://github.com/Abhishek-Sahu532/assure-you",
     },
     {
       title: "KIDS LEARNING CENTER",
@@ -47,7 +47,7 @@ export const Projects = () => {
       tech: "React Js, Express JS",
       description: "Design & Development",
       imgUrl: project3,
-      deployedLink: "https://abhishek-sahu532.github.io/Binary-calculator/",
+      deployedLink: "https://portfolioofabhishek.vercel.app/",
       githubLink: "https://github.com/Abhishek-Sahu532/Portfolio.git",
     },
     {
