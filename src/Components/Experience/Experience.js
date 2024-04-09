@@ -13,7 +13,7 @@ const Experience = () => {
     {
       compLogo: WorldsoftITSolutionLogo,
       compName: "Worldsoft IT Solution Pvt. Ltd",
-      workingDuration: "Nov 22-Present",
+      workingDuration: "Jan 22-Present",
       profile: "Full Stack Developer",
       roles:
         "My role is to develop complete front end, back end projects i.e., a Full Stack Software Developer.",
@@ -21,7 +21,7 @@ const Experience = () => {
     {
       compLogo: WorldsoftITSolutionLogo,
       compName: "Worldsoft IT Solution Pvt. Ltd",
-      workingDuration: "May 22 - Nav 22",
+      workingDuration: "Sep 21 - Dec-21",
       profile: "Full Stack Trainee",
       roles:
         "My role is to develop complete front end, back end projects i.e., a Full Stack Software Developer.",
@@ -29,7 +29,7 @@ const Experience = () => {
     {
       compLogo: topntownLogo,
       compName: "Ramani Ice-cream Co. Ltd.",
-      workingDuration: "Jan 19 - Apr 22",
+      workingDuration: "Jan 19 - Aug-21",
       profile: "MIS Executive",
       roles: "To Complete Daily MIS Reports of the Sales Department.",
     },
